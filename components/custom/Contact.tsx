@@ -208,7 +208,7 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative py-20 md:py-28 px-4 md:px-10 lg:px-20 bg-card overflow-hidden"
+      className="relative py-12 md:py-20 lg:py-28 px-4 md:px-10 lg:px-20 bg-card overflow-hidden"
     >
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -217,10 +217,10 @@ const Contact: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
           {/* Left Content */}
-          <div className="flex flex-col gap-6 max-w-lg">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+          <div className="flex flex-col gap-4 md:gap-6 max-w-lg">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-2 md:px-3 py-1 text-[10px] md:text-xs font-medium text-primary">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -228,21 +228,21 @@ const Contact: React.FC = () => {
               Response within 24h
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.15]">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.15]">
               Let's Build Your Team{" "}
               <span className="text-primary">Together</span>
             </h2>
 
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-sm md:text-base lg:text-lg leading-relaxed">
               Connect with our talent specialists to find the perfect fit for
               your company. Fill out the form and we'll start the search
               immediately.
             </p>
 
             {/* Feature list */}
-            <div className="flex flex-col gap-4 mt-4">
+            <div className="flex flex-col gap-3 md:gap-4 mt-2 md:mt-4">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <span className="material-symbols-outlined text-xl">
                     check_circle
                   </span>
@@ -257,7 +257,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <span className="material-symbols-outlined text-xl">
                     bolt
                   </span>
@@ -272,7 +272,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <span className="material-symbols-outlined text-xl">
                     support_agent
                   </span>
@@ -289,7 +289,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Trust signal */}
-            <div className="mt-8 pt-8 border-t border-border">
+            <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-border">
               <div className="flex items-center gap-4">
                 <div className="flex -space-x-3">
                   <Image
@@ -336,11 +336,11 @@ const Contact: React.FC = () => {
 
           {/* Right: Form Card */}
           <div className="w-full">
-            <div className="bg-foreground dark:bg-muted p-8 md:p-12 border border-border/20 backdrop-blur-sm rounded-2xl">
-              <h3 className="text-2xl font-bold uppercase mb-10 text-background dark:text-foreground">
+            <div className="bg-foreground dark:bg-muted p-6 md:p-8 lg:p-12 border border-border/20 backdrop-blur-sm rounded-xl md:rounded-2xl">
+              <h3 className="text-xl md:text-2xl font-bold uppercase mb-6 md:mb-10 text-background dark:text-foreground">
                 Get a Free Consultation
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
                 <FloatingInput
                   name="name"
                   label="Your Name"
@@ -372,7 +372,7 @@ const Contact: React.FC = () => {
                 <Button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="w-full bg-background dark:bg-foreground text-foreground dark:text-background font-bold uppercase tracking-widest py-6 h-auto mt-4 hover:bg-background/90 dark:hover:bg-foreground/90 transition-colors text-base"
+                  className="w-full bg-background dark:bg-foreground text-foreground dark:text-background font-bold uppercase tracking-widest py-4 md:py-6 h-auto mt-4 hover:bg-background/90 dark:hover:bg-foreground/90 transition-colors text-sm md:text-base"
                 >
                   {status === "submitting"
                     ? "Sending..."

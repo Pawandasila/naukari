@@ -28,11 +28,11 @@ const JobSeeker: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-background" id="seekers">
+    <section className="py-12 md:py-20 bg-background" id="seekers">
       <div className="px-4 md:px-10 lg:px-20 flex justify-center">
-        <div className="max-w-[1200px] w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1200px] w-full grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Image */}
-          <div className="order-2 lg:order-1 relative h-full min-h-[400px] rounded-2xl overflow-hidden shadow-xl">
+          <div className="order-2 lg:order-1 relative h-[250px] md:h-[350px] lg:h-full lg:min-h-[400px] rounded-xl md:rounded-2xl overflow-hidden shadow-xl">
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
@@ -43,32 +43,34 @@ const JobSeeker: React.FC = () => {
           </div>
 
           {/* Content */}
-          <div className="order-1 lg:order-2 flex flex-col gap-8">
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-xs">
-                <span className="w-8 h-[2px] bg-primary"></span>
+          <div className="order-1 lg:order-2 flex flex-col gap-6 md:gap-8">
+            <div className="flex flex-col gap-3 md:gap-4">
+              <div className="flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-[10px] md:text-xs">
+                <span className="w-6 md:w-8 h-[2px] bg-primary"></span>
                 For Job Seekers
               </div>
-              <h2 className="text-foreground text-3xl md:text-4xl font-black leading-tight tracking-tight">
+              <h2 className="text-foreground text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight">
                 Land Your Dream Role Faster
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-muted-foreground text-sm md:text-base lg:text-lg leading-relaxed">
                 Stop endless searching. Create one profile and get matched with
                 top companies looking for your specific skills.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex flex-col gap-2 p-5 rounded-xl bg-muted/50 border border-border hover:shadow-md transition-shadow"
+                  className="flex flex-col gap-1.5 md:gap-2 p-3 md:p-5 rounded-lg md:rounded-xl bg-muted/50 border border-border hover:shadow-md transition-shadow"
                 >
-                  <span className="material-symbols-outlined text-primary text-3xl">
+                  <span className="material-symbols-outlined text-primary text-2xl md:text-3xl">
                     {feature.icon}
                   </span>
-                  <h3 className="font-bold text-foreground">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm">
+                  <h3 className="font-bold text-foreground text-sm md:text-base">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground text-xs md:text-sm hidden md:block">
                     {feature.description}
                   </p>
                 </div>
@@ -77,7 +79,7 @@ const JobSeeker: React.FC = () => {
 
             <Button
               variant="outline"
-              className="w-fit mt-2 h-12 px-6 font-bold shadow-md bg-foreground text-background hover:bg-foreground/90"
+              className="w-fit mt-2 h-11 md:h-12 px-5 md:px-6 text-sm md:text-base font-bold shadow-md bg-foreground text-background hover:bg-foreground/90"
             >
               Find a Job
             </Button>

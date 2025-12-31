@@ -17,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Devbhoomi Global Services - Connecting Talent with Opportunities",
-  description: "We connect skilled professionals with meaningful roles across banking and financial sectors. Expert recruitment and staffing solutions in Haldwani.",
+  description:
+    "We connect skilled professionals with meaningful roles across banking and financial sectors. Expert recruitment and staffing solutions in Haldwani.",
 };
 
 export default function RootLayout({
@@ -28,10 +29,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
           rel="stylesheet"
         />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

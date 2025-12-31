@@ -29,16 +29,16 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-foreground dark:bg-card border-t border-background/10 dark:border-border pt-20 pb-8 px-6 md:px-10 lg:px-20 relative z-10 overflow-hidden">
+    <footer className="bg-foreground dark:bg-card border-t border-background/10 dark:border-border pt-12 md:pt-20 pb-6 md:pb-8 px-4 md:px-10 lg:px-20 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-20">
           {/* Sitemap */}
           <div>
-            <h4 className="font-bold uppercase tracking-widest text-sm mb-6 text-background/50 dark:text-muted-foreground">
+            <h4 className="font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6 text-background/50 dark:text-muted-foreground">
               Sitemap
             </h4>
-            <ul className="space-y-4 text-sm font-medium uppercase tracking-wide text-background dark:text-foreground">
+            <ul className="space-y-3 md:space-y-4 text-xs md:text-sm font-medium uppercase tracking-wide text-background dark:text-foreground">
               {sitemapLinks.map((link) => (
                 <li key={link.href}>
                   <a
@@ -55,10 +55,10 @@ const Footer: React.FC = () => {
 
           {/* Socials */}
           <div>
-            <h4 className="font-bold uppercase tracking-widest text-sm mb-6 text-background/50 dark:text-muted-foreground">
+            <h4 className="font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6 text-background/50 dark:text-muted-foreground">
               Socials
             </h4>
-            <ul className="space-y-4 text-sm font-medium uppercase tracking-wide text-background dark:text-foreground">
+            <ul className="space-y-3 md:space-y-4 text-xs md:text-sm font-medium uppercase tracking-wide text-background dark:text-foreground">
               <li>
                 <a
                   href="https://instagram.com"
@@ -104,10 +104,10 @@ const Footer: React.FC = () => {
 
           {/* Legal */}
           <div>
-            <h4 className="font-bold uppercase tracking-widest text-sm mb-6 text-background/50 dark:text-muted-foreground">
+            <h4 className="font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6 text-background/50 dark:text-muted-foreground">
               Legal
             </h4>
-            <ul className="space-y-4 text-sm font-medium uppercase tracking-wide text-background dark:text-foreground">
+            <ul className="space-y-3 md:space-y-4 text-xs md:text-sm font-medium uppercase tracking-wide text-background dark:text-foreground">
               <li>
                 <a
                   href="#"
@@ -137,26 +137,26 @@ const Footer: React.FC = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold uppercase tracking-widest text-sm mb-6 text-background/50 dark:text-muted-foreground">
+            <h4 className="font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6 text-background/50 dark:text-muted-foreground">
               Contact
             </h4>
-            <div className="space-y-2 text-sm text-background/70 dark:text-muted-foreground">
+            <div className="space-y-2 text-xs md:text-sm text-background/70 dark:text-muted-foreground">
               <p>India (HQ)</p>
-              <p>info@devbhoomiglobalservices.com</p>
+              <p className="break-all">info@devbhoomiglobalservices.com</p>
               <p>+91 9084017662</p>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-background/10 dark:border-border pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest text-background/40 dark:text-muted-foreground font-bold">
+        <div className="border-t border-background/10 dark:border-border pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center text-[8px] md:text-[10px] uppercase tracking-widest text-background/40 dark:text-muted-foreground font-bold">
           <p>© 2025 Naukari Marg. All Rights Reserved.</p>
         </div>
       </div>
 
       {/* Large Brand Text */}
-      <div className="flex justify-center mt-12 select-none pointer-events-none opacity-10">
-        <h1 className="text-[11.5vw] leading-none font-black text-background dark:text-foreground tracking-tighter uppercase">
+      <div className="flex justify-center mt-8 md:mt-12 select-none pointer-events-none opacity-10">
+        <h1 className="text-[13vw] md:text-[11.5vw] leading-none font-black text-background dark:text-foreground tracking-tighter uppercase">
           Naukari Marg
         </h1>
       </div>

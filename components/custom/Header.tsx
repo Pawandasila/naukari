@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -18,6 +19,7 @@ const Header: React.FC = () => {
     sectionId: string
   ) => {
     e.preventDefault();
+    setIsMobileMenuOpen(false);
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({
@@ -35,25 +37,27 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-b-[#e7edf3] dark:border-b-gray-800 bg-white/90 dark:bg-background-dark/90 px-10 py-4 backdrop-blur-sm">
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-3 lg:flex-1">
+      <header className="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-b-[#e7edf3] dark:border-b-gray-800 bg-white/90 dark:bg-background-dark/90 px-4 md:px-10 py-3 md:py-4 backdrop-blur-sm">
+        <div className="flex items-center gap-2 md:gap-4">
+          <div className="flex items-center gap-2 md:gap-3 lg:flex-1">
             <Link href="#" className="flex items-center gap-2 group">
               <Image
-                alt="Devbhoomi Global Services logo"
+                alt="Naukari Marg logo"
                 height={40}
                 width={40}
-                className="h-10 w-10 object-cover rounded-full ring-1 ring-white/10"
+                className="h-8 w-8 md:h-10 md:w-10 object-cover rounded-full ring-1 ring-white/10"
                 src="/logo.png"
               />
-              <span className="font-semibold text-primary text-lg tracking-tight group-hover:text-primary/40 transition-colors">
+              <span className="font-semibold text-primary text-base md:text-lg tracking-tight group-hover:text-primary/40 transition-colors">
                 Naukari Marg
               </span>
             </Link>
           </div>
         </div>
-        <div className="flex flex-1 justify-end gap-8">
-          <div className="hidden items-center gap-9 md:flex">
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex flex-1 justify-end gap-8">
+          <div className="flex items-center gap-6 lg:gap-9">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -65,16 +69,37 @@ const Header: React.FC = () => {
               </Link>
             ))}
           </div>
-          {/* <div className="flex gap-3">
-            <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg px-4 py-2 bg-[#e7edf3] dark:bg-gray-700 text-[#0d141b] dark:text-white text-sm font-bold hover:bg-primary  hover:text-primary-foreground dark:hover:bg-gray-600 transition-colors">
-              <span className="truncate">Log In</span>
-            </button>
-            <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg px-4 py-2 bg-primary text-white text-sm font-bold hover:bg-primary/60 transition-colors shadow-md shadow-blue-500/20">
-              <span className="truncate">Sign Up</span>
-            </button>
-          </div> */}
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden flex items-center justify-center w-10 h-10 text-foreground"
+          aria-label="Toggle menu"
+        >
+          <span className="material-symbols-outlined text-2xl">
+            {isMobileMenuOpen ? "close" : "menu"}
+          </span>
+        </button>
       </header>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed inset-x-0 top-[57px] bg-white dark:bg-background-dark border-b border-border z-40 shadow-lg">
+          <div className="flex flex-col p-4 gap-2">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={`#${link.href}`}
+                onClick={(e) => scrollToSection(e, link.href)}
+                className="py-3 px-4 text-base font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </>
   );
 };
