@@ -1,66 +1,164 @@
-import React from 'react';
+"use client";
 
-const linkGroups = [
-  {
-    title: 'Quick Links',
-    links: [
-      { label: 'Home', href: '#' },
-      { label: 'Available Jobs', href: '#jobs' },
-      { label: 'Services', href: '#services' },
-      { label: 'Contact Us', href: '#contact' }
-    ]
-  },
-  {
-    title: 'Information',
-    links: [
-      { label: 'Disclaimer', href: '#' },
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms & Conditions', href: '#' }
-    ]
-  }
-];
+import React from "react";
 
 const Footer: React.FC = () => {
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    if (sectionId === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  const sitemapLinks = [
+    { label: "Home", href: "top" },
+    { label: "Services", href: "services" },
+    { label: "Employers", href: "employers" },
+    { label: "Contact", href: "contact" },
+  ];
+
   return (
-    <footer className="relative border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
-      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-blue-500/40 to-transparent" />
-      <div className="mx-auto max-w-7xl py-14 px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-          {linkGroups.map(group => (
-            <div key={group.title}>
-              <h3 className="text-sm font-semibold tracking-wide text-slate-900 dark:text-white">{group.title}</h3>
-              <ul role="list" className="mt-6 space-y-3">
-                {group.links.map(l => (
-                  <li key={l.label}>
-                    <a href={l.href} className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors flex items-center gap-1">
-                      <span className="material-symbols-outlined text-[14px] opacity-40">chevron_right</span>{l.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-          <div className="col-span-2">
-            <h3 className="text-sm font-semibold tracking-wide text-slate-900 dark:text-white">Contact</h3>
-            <div className="mt-6 space-y-4 text-sm text-slate-600 dark:text-slate-400">
-              <p><span className="font-semibold text-slate-800 dark:text-slate-200">Office:</span> Near Palam City, Haldwani</p>
-              <p><span className="font-semibold text-slate-800 dark:text-slate-200">Phone:</span> +91 9084017662</p>
-              <p><span className="font-semibold text-slate-800 dark:text-slate-200">Email:</span> info@devbhoomiglobalservices.com</p>
-              <p><span className="font-semibold text-slate-800 dark:text-slate-200">Hours:</span> Mon-Sat (9:00 AM – 07:00 PM)</p>
-              <div className="flex gap-3 pt-2">
-                {['facebook','linkedin','public'].map(icon => (
-                  <a key={icon} href="#" className="flex h-9 w-9 items-center justify-center rounded-md bg-white/70 dark:bg-white/10 ring-1 ring-slate-200 dark:ring-white/10 text-slate-600 dark:text-slate-300 hover:text-blue-600 hover:ring-blue-500 transition-colors">
-                    <span className="material-symbols-outlined">{icon}</span>
+    <footer className="bg-foreground dark:bg-card border-t border-background/10 dark:border-border pt-20 pb-8 px-6 md:px-10 lg:px-20 relative z-10 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        {/* Links Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
+          {/* Sitemap */}
+          <div>
+            <h4 className="font-bold uppercase tracking-widest text-sm mb-6 text-background/50 dark:text-muted-foreground">
+              Sitemap
+            </h4>
+            <ul className="space-y-4 text-sm font-medium uppercase tracking-wide text-background dark:text-foreground">
+              {sitemapLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={`#${link.href}`}
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className="hover:text-background/60 dark:hover:text-muted-foreground transition-colors cursor-pointer"
+                  >
+                    {link.label}
                   </a>
-                ))}
-              </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Socials */}
+          <div>
+            <h4 className="font-bold uppercase tracking-widest text-sm mb-6 text-background/50 dark:text-muted-foreground">
+              Socials
+            </h4>
+            <ul className="space-y-4 text-sm font-medium uppercase tracking-wide text-background dark:text-foreground">
+              <li>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-background/60 dark:hover:text-muted-foreground transition-colors"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-background/60 dark:hover:text-muted-foreground transition-colors"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-background/60 dark:hover:text-muted-foreground transition-colors"
+                >
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-background/60 dark:hover:text-muted-foreground transition-colors"
+                >
+                  Facebook
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-bold uppercase tracking-widest text-sm mb-6 text-background/50 dark:text-muted-foreground">
+              Legal
+            </h4>
+            <ul className="space-y-4 text-sm font-medium uppercase tracking-wide text-background dark:text-foreground">
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-background/60 dark:hover:text-muted-foreground transition-colors"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-background/60 dark:hover:text-muted-foreground transition-colors"
+                >
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-background/60 dark:hover:text-muted-foreground transition-colors"
+                >
+                  Cookie Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-bold uppercase tracking-widest text-sm mb-6 text-background/50 dark:text-muted-foreground">
+              Contact
+            </h4>
+            <div className="space-y-2 text-sm text-background/70 dark:text-muted-foreground">
+              <p>India (HQ)</p>
+              <p>info@devbhoomiglobalservices.com</p>
+              <p>+91 9084017662</p>
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-slate-900/10 dark:border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs leading-5 text-slate-500 dark:text-slate-400">© 2025 K J R Devbhoomi Global Services. All Rights Reserved.</p>
-          <p className="text-xs text-slate-400 dark:text-slate-500">Built with passion in Uttarakhand.</p>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-background/10 dark:border-border pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest text-background/40 dark:text-muted-foreground font-bold">
+          <p>© 2025 Naukari Marg. All Rights Reserved.</p>
         </div>
+      </div>
+
+      {/* Large Brand Text */}
+      <div className="flex justify-center mt-12 select-none pointer-events-none opacity-10">
+        <h1 className="text-[11.5vw] leading-none font-black text-background dark:text-foreground tracking-tighter uppercase">
+          Naukari Marg
+        </h1>
       </div>
     </footer>
   );

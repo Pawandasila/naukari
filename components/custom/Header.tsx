@@ -1,12 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
 const Header: React.FC = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -15,96 +13,69 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  const navLinks = [
+    { label: "For Employers", href: "employers" },
+    { label: "For Candidates", href: "seekers" },
+    { label: "Contact", href: "contact" },
+  ];
+
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 border-b border-white/10 transition-colors duration-300 ${
-        isScrolled ? "bg-slate-950/70 backdrop-blur-md" : "bg-transparent"
-      }`}
-    >
-      <nav
-        aria-label="Global"
-        className="mx-auto flex items-center justify-between px-6 lg:px-10 py-3 max-w-7xl"
-      >
-        {/* Logo */}
-        <div className="flex items-center gap-3 lg:flex-1">
-          <Link href="#" className="flex items-center gap-2 group">
-            <Image
-              alt="Devbhoomi Global Services logo"
-              height={40}
-              width={40}
-              className="h-10 w-10 object-cover rounded-full ring-1 ring-white/10"
-              src="/logo.png"
-            />
-            <span className="font-semibold text-white text-lg tracking-tight group-hover:text-blue-300 transition-colors">
-              Devbhoomi
-            </span>
-          </Link>
-        </div>
-
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex gap-8">
-          {['Services','Process','Jobs','Contact'].map(label => (
-            <Link
-              key={label}
-              href={`#${label.toLowerCase()}`}
-              className="relative text-sm font-medium text-slate-200 hover:text-white transition-colors"
-            >
-              {label}
-              <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full" />
+    <>
+      <header className="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-b-[#e7edf3] dark:border-b-gray-800 bg-white/90 dark:bg-background-dark/90 px-10 py-4 backdrop-blur-sm">
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 lg:flex-1">
+            <Link href="#" className="flex items-center gap-2 group">
+              <Image
+                alt="Devbhoomi Global Services logo"
+                height={40}
+                width={40}
+                className="h-10 w-10 object-cover rounded-full ring-1 ring-white/10"
+                src="/logo.png"
+              />
+              <span className="font-semibold text-primary text-lg tracking-tight group-hover:text-primary/40 transition-colors">
+                Naukari Marg
+              </span>
             </Link>
-          ))}
+          </div>
         </div>
-
-        {/* Desktop CTA */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link
-            href="#"
-            className="rounded-md bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow hover:bg-blue-500 transition-colors"
-          >
-            Register
-          </Link>
-        </div>
-
-        {/* Mobile button */}
-        <div className="flex lg:hidden">
-          <Button
-            type="button"
-            variant="default"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-white rounded-md hover:bg-white/10"
-          >
-            <span className="material-symbols-outlined">
-              {isMobileMenuOpen ? 'close' : 'menu'}
-            </span>
-          </Button>
-        </div>
-      </nav>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-md px-6 pt-20 pb-10 flex flex-col">
-          <div className="flex flex-col gap-4 flex-1">
-            {['Services','Process','Jobs','Contact'].map(label => (
+        <div className="flex flex-1 justify-end gap-8">
+          <div className="hidden items-center gap-9 md:flex">
+            {navLinks.map((link) => (
               <Link
-                key={label}
-                href={`#${label.toLowerCase()}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg font-medium text-slate-100 py-3 border-b border-white/10"
+                key={link.href}
+                href={`#${link.href}`}
+                onClick={(e) => scrollToSection(e, link.href)}
+                className="text-sm font-medium leading-normal text-[#0d141b] dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
               >
-                {label}
+                {link.label}
               </Link>
             ))}
           </div>
-          <Link
-            href="#"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-4 inline-flex justify-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-blue-500 transition-colors"
-          >
-            Register →
-          </Link>
+          {/* <div className="flex gap-3">
+            <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg px-4 py-2 bg-[#e7edf3] dark:bg-gray-700 text-[#0d141b] dark:text-white text-sm font-bold hover:bg-primary  hover:text-primary-foreground dark:hover:bg-gray-600 transition-colors">
+              <span className="truncate">Log In</span>
+            </button>
+            <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg px-4 py-2 bg-primary text-white text-sm font-bold hover:bg-primary/60 transition-colors shadow-md shadow-blue-500/20">
+              <span className="truncate">Sign Up</span>
+            </button>
+          </div> */}
         </div>
-      )}
-    </header>
+      </header>
+    </>
   );
 };
 
