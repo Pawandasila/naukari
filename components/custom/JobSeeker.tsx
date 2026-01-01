@@ -79,7 +79,7 @@ const JobSeeker: React.FC = () => {
 
             <Button
               variant="outline"
-              className="w-fit mt-2 h-11 md:h-12 px-5 md:px-6 text-sm md:text-base font-bold shadow-md bg-foreground text-background hover:bg-foreground/90"
+              className="w-fit mt-2 h-11 md:h-12 px-5 md:px-6 text-sm md:text-base font-bold shadow-md bg-background text-primary hover:bg-primary/90 hover:text-background transition-colors duration-75"
             >
               Find a Job
             </Button>

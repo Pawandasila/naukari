@@ -29,9 +29,9 @@ const Hero: React.FC = () => {
             {/* Headline */}
             <div className="flex flex-col gap-4 md:gap-6">
               <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] md:leading-[1.05] tracking-tight text-foreground">
-                Your Next <span className="text-primary">Hire</span>
+                Your Next <span className="text-primary">Hire</span> is
                 <br />
-                is One Click Away
+                One Click Away
               </h1>
               <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-lg">
                 Connect with verified talent across India. From startups to

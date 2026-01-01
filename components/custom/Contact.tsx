@@ -43,14 +43,14 @@ const FloatingInput: React.FC<FloatingInputProps> = ({
         required={required}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        className="peer w-full bg-transparent border-b placeholder:text-background/90 dark:placeholder:text-foreground/90 border-background/20 dark:border-foreground/20 pt-6 pb-2 text-background dark:text-foreground focus:outline-none focus:border-background dark:focus:border-foreground transition-colors text-sm"
+        className="peer w-full bg-transparent border-b placeholder:text-primary-foreground/90 border-primary-foreground/30 pt-6 pb-2 text-primary-foreground focus:outline-none focus:border-primary-foreground transition-colors text-sm"
       />
       <label
         htmlFor={name}
         className={`absolute left-0 uppercase tracking-widest transition-all duration-200 pointer-events-none ${
           isFloating
-            ? "top-0 text-[10px] text-background/60 dark:text-foreground/60"
-            : "top-4 text-sm text-background/70 dark:text-foreground/70"
+            ? "top-0 text-[10px] text-primary-foreground/70"
+            : "top-4 text-sm text-primary-foreground/80"
         }`}
       >
         {label}
@@ -88,14 +88,14 @@ const FloatingTextarea: React.FC<FloatingTextareaProps> = ({
         rows={rows}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        className="peer w-full bg-transparent border-b border-background/20 dark:border-foreground/20 pt-6 pb-2 text-background dark:text-foreground focus:outline-none focus:border-background dark:focus:border-foreground transition-colors text-sm resize-none"
+        className="peer w-full bg-transparent border-b border-primary-foreground/30 pt-6 pb-2 text-primary-foreground focus:outline-none focus:border-primary-foreground transition-colors text-sm resize-none"
       />
       <label
         htmlFor={name}
         className={`absolute left-0 uppercase tracking-widest transition-all duration-200 pointer-events-none ${
           isFloating
-            ? "top-0 text-[10px] text-background/60 dark:text-foreground/60"
-            : "top-4 text-sm text-background/70 dark:text-foreground/70"
+            ? "top-0 text-[10px] text-primary-foreground/70"
+            : "top-4 text-sm text-primary-foreground/80"
         }`}
       >
         {label}
@@ -132,8 +132,8 @@ const FloatingShadcnSelect: React.FC<FloatingShadcnSelectProps> = ({
       <label
         className={`absolute left-0 uppercase tracking-widest transition-all duration-200 pointer-events-none z-10 ${
           isFloating
-            ? "top-0 text-[10px] text-background/60 dark:text-foreground/60"
-            : "top-4 text-sm text-background/70 dark:text-foreground/70"
+            ? "top-0 text-[10px] text-primary-foreground/70"
+            : "top-4 text-sm text-primary-foreground/80"
         }`}
       >
         {label}
@@ -144,7 +144,7 @@ const FloatingShadcnSelect: React.FC<FloatingShadcnSelectProps> = ({
           onValueChange={onValueChange}
           onOpenChange={setIsOpen}
         >
-          <SelectTrigger className="w-full bg-transparent border-0 border-b border-background/20 dark:border-foreground/20 rounded-none pt-6 pb-2 h-auto text-background dark:text-foreground focus:ring-0 focus:border-background dark:focus:border-foreground shadow-none text-sm uppercase tracking-wider">
+          <SelectTrigger className="w-full bg-transparent border-0 border-b border-primary-foreground/30 rounded-none pt-6 pb-2 h-auto text-primary-foreground focus:ring-0 focus:border-primary-foreground shadow-none text-sm uppercase tracking-wider">
             <SelectValue placeholder="" />
           </SelectTrigger>
           <SelectContent className="bg-card border border-border shadow-lg">
@@ -336,8 +336,8 @@ const Contact: React.FC = () => {
 
           {/* Right: Form Card */}
           <div className="w-full">
-            <div className="bg-foreground dark:bg-muted p-6 md:p-8 lg:p-12 border border-border/20 backdrop-blur-sm rounded-xl md:rounded-2xl">
-              <h3 className="text-xl md:text-2xl font-bold uppercase mb-6 md:mb-10 text-background dark:text-foreground">
+            <div className="bg-gradient-to-br from-primary to-primary/80 dark:from-primary/90 dark:to-primary/70 p-6 md:p-8 lg:p-12 border border-primary/20 backdrop-blur-sm rounded-xl md:rounded-2xl shadow-xl shadow-primary/20">
+              <h3 className="text-xl md:text-2xl font-bold uppercase mb-6 md:mb-10 text-primary-foreground">
                 Get a Free Consultation
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
@@ -372,7 +372,7 @@ const Contact: React.FC = () => {
                 <Button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="w-full bg-background dark:bg-foreground text-foreground dark:text-background font-bold uppercase tracking-widest py-4 md:py-6 h-auto mt-4 hover:bg-background/90 dark:hover:bg-foreground/90 transition-colors text-sm md:text-base"
+                  className="w-full bg-primary-foreground text-primary font-bold uppercase tracking-widest py-4 md:py-6 h-auto mt-4 hover:bg-primary-foreground/90 transition-colors text-sm md:text-base"
                 >
                   {status === "submitting"
                     ? "Sending..."

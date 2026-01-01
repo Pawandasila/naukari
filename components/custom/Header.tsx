@@ -42,14 +42,14 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-2 md:gap-3 lg:flex-1">
             <Link href="#" className="flex items-center gap-2 group">
               <Image
-                alt="Naukari Marg logo"
+                alt="RojMarg logo"
                 height={40}
                 width={40}
                 className="h-8 w-8 md:h-10 md:w-10 object-cover rounded-full ring-1 ring-white/10"
                 src="/logo.png"
               />
               <span className="font-semibold text-primary text-base md:text-lg tracking-tight group-hover:text-primary/40 transition-colors">
-                Naukari Marg
+                RojMarg
               </span>
             </Link>
           </div>

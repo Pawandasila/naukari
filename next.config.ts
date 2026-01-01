@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
     ],
     qualities: [100, 85],
   },
+  allowedDevOrigins: ["*"],
 };
 
 export default nextConfig;
