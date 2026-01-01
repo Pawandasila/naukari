@@ -15,16 +15,16 @@ export default function Home() {
         <Header />
         <main>
           <Hero />
-          <SectionReveal>
+          <SectionReveal direction="left" delay={0.3}>
             <Services />
           </SectionReveal>
-          <SectionReveal delay={0.1}>
+          <SectionReveal direction="right" delay={0.6}>
             <Employers />
           </SectionReveal>
-          <SectionReveal delay={0.1}>
+          <SectionReveal direction="fade" delay={0.9}>
             <JobSeeker />
           </SectionReveal>
-          <SectionReveal delay={0.1}>
+          <SectionReveal direction="up" delay={1.2}>
             <Contact />
           </SectionReveal>
         </main>

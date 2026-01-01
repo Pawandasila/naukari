@@ -8,9 +8,9 @@ import bgImage from "@/assests/bg-2.png";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen bg-background overflow-hidden">
+    <section className="relative md:min-h-screen bg-background overflow-hidden pb-8 md:pb-0">
       <div className="relative z-10 max-w-[100vw] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[70vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center md:min-h-[70vh]">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
