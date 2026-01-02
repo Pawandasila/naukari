@@ -8,7 +8,10 @@ import bgImage from "@/assests/bg-2.png";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative md:min-h-screen bg-background overflow-hidden">
+    <section
+      className="relative md:min-h-screen overflow-hidden"
+      style={{ backgroundColor: "#F4F0FF" }}
+    >
       <div className="relative z-10 max-w-[100vw] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center md:min-h-[70vh]">
           <motion.div

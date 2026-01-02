@@ -208,7 +208,8 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 bg-card overflow-hidden"
+      className="relative py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden"
+      style={{ backgroundColor: "#F4F0FF" }}
     >
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

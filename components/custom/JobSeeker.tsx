@@ -29,8 +29,9 @@ const JobSeeker: React.FC = () => {
 
   return (
     <section
-      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-background"
+      className="py-12 sm:py-16 md:py-20 lg:py-24"
       id="seekers"
+      style={{ backgroundColor: "#FFF8F3" }}
     >
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
