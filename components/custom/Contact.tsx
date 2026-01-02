@@ -209,7 +209,7 @@ const Contact: React.FC = () => {
     <section
       id="contact"
       className="relative py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden"
-      style={{ backgroundColor: "#F4F0FF" }}
+      style={{ backgroundColor: "#90CAF9", color: "#0D47A1" }}
     >
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -221,20 +221,39 @@ const Contact: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-20 items-center">
           {/* Left Content */}
           <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 max-w-lg">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-2 sm:px-2.5 md:px-3 py-1 text-[9px] sm:text-[10px] md:text-xs font-medium text-primary">
+            <div
+              className="inline-flex w-fit items-center gap-2 rounded-full border px-2 sm:px-2.5 md:px-3 py-1 text-[9px] sm:text-[10px] md:text-xs font-medium"
+              style={{
+                borderColor: "#1565C0",
+                backgroundColor: "rgba(21,101,192,0.1)",
+                color: "#1565C0",
+              }}
+            >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                <span
+                  className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+                  style={{ backgroundColor: "#1565C0" }}
+                ></span>
+                <span
+                  className="relative inline-flex rounded-full h-2 w-2"
+                  style={{ backgroundColor: "#1565C0" }}
+                ></span>
               </span>
               Response within 24h
             </div>
 
-            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.15]">
+            <h2
+              className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15]"
+              style={{ color: "#0D47A1" }}
+            >
               Let's Build Your Team{" "}
-              <span className="text-primary">Together</span>
+              <span style={{ color: "#1565C0" }}>Together</span>
             </h2>
 
-            <p className="text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed">
+            <p
+              className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed"
+              style={{ color: "#1565C0" }}
+            >
               Connect with our talent specialists to find the perfect fit for
               your company. Fill out the form and we'll start the search
               immediately.
@@ -243,46 +262,82 @@ const Contact: React.FC = () => {
             {/* Feature list */}
             <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 mt-1 sm:mt-2 md:mt-4">
               <div className="flex items-center gap-2 sm:gap-3">
-                <div className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 items-center justify-center rounded-md sm:rounded-lg bg-primary/10 text-primary">
+                <div
+                  className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 items-center justify-center rounded-md sm:rounded-lg"
+                  style={{
+                    backgroundColor: "rgba(21,101,192,0.1)",
+                    color: "#1565C0",
+                  }}
+                >
                   <span className="material-symbols-outlined text-lg sm:text-xl">
                     check_circle
                   </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-xs sm:text-sm text-foreground">
+                  <span
+                    className="font-bold text-xs sm:text-sm"
+                    style={{ color: "#0D47A1" }}
+                  >
                     Verified Candidates
                   </span>
-                  <span className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">
+                  <span
+                    className="text-[10px] sm:text-xs md:text-sm"
+                    style={{ color: "#1565C0" }}
+                  >
                     Pre-screened professionals ready to hire.
                   </span>
                 </div>
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
-                <div className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 items-center justify-center rounded-md sm:rounded-lg bg-primary/10 text-primary">
+                <div
+                  className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 items-center justify-center rounded-md sm:rounded-lg"
+                  style={{
+                    backgroundColor: "rgba(21,101,192,0.1)",
+                    color: "#1565C0",
+                  }}
+                >
                   <span className="material-symbols-outlined text-lg sm:text-xl">
                     bolt
                   </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-xs sm:text-sm text-foreground">
+                  <span
+                    className="font-bold text-xs sm:text-sm"
+                    style={{ color: "#0D47A1" }}
+                  >
                     Fast Placement
                   </span>
-                  <span className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">
+                  <span
+                    className="text-[10px] sm:text-xs md:text-sm"
+                    style={{ color: "#1565C0" }}
+                  >
                     Average placement time of 7 days.
                   </span>
                 </div>
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
-                <div className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 items-center justify-center rounded-md sm:rounded-lg bg-primary/10 text-primary">
+                <div
+                  className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 items-center justify-center rounded-md sm:rounded-lg"
+                  style={{
+                    backgroundColor: "rgba(21,101,192,0.1)",
+                    color: "#1565C0",
+                  }}
+                >
                   <span className="material-symbols-outlined text-lg sm:text-xl">
                     support_agent
                   </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-xs sm:text-sm text-foreground">
+                  <span
+                    className="font-bold text-xs sm:text-sm"
+                    style={{ color: "#0D47A1" }}
+                  >
                     Dedicated Support
                   </span>
-                  <span className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">
+                  <span
+                    className="text-[10px] sm:text-xs md:text-sm"
+                    style={{ color: "#1565C0" }}
+                  >
                     Personal account manager for every client.
                   </span>
                 </div>
@@ -290,7 +345,10 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Trust signal */}
-            <div className="mt-4 sm:mt-6 md:mt-8 pt-4 sm:pt-6 md:pt-8 border-t border-border">
+            <div
+              className="mt-4 sm:mt-6 md:mt-8 pt-4 sm:pt-6 md:pt-8 border-t"
+              style={{ borderColor: "#1565C0" }}
+            >
               <div className="flex items-center gap-3 sm:gap-4">
                 <div className="flex -space-x-2 sm:-space-x-3">
                   <Image
@@ -327,7 +385,10 @@ const Contact: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                  <span className="text-xs sm:text-sm font-medium text-muted-foreground">
+                  <span
+                    className="text-xs sm:text-sm font-medium"
+                    style={{ color: "#1565C0" }}
+                  >
                     Trusted by 500+ companies
                   </span>
                 </div>

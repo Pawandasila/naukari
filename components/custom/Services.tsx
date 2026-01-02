@@ -55,20 +55,26 @@ const Services: React.FC = () => {
     <section
       id="services"
       className="py-6 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-12 relative z-10"
-      style={{ backgroundColor: "#FFF8F3" }}
+      style={{ backgroundColor: "#1E88E5", color: "#FFFFFF" }}
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/2 right-0 w-48 md:w-96 h-48 md:h-96 bg-primary/8 rounded-full blur-3xl opacity-30"></div>
-        <div className="absolute bottom-0 left-1/4 w-48 md:w-96 h-48 md:h-96 bg-primary/5 rounded-full blur-3xl opacity-15"></div>
+        <div className="absolute top-1/2 right-0 w-48 md:w-96 h-48 md:h-96 bg-white/10 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-0 left-1/4 w-48 md:w-96 h-48 md:h-96 bg-white/5 rounded-full blur-3xl opacity-15"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header - Always visible */}
         <div className="text-center lg:text-left mb-4 sm:mb-6 md:mb-0">
-          <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight font-black uppercase tracking-tighter mb-2 sm:mb-3 md:mb-6 text-foreground lg:hidden">
-            Our <span className="text-muted-foreground">Domains.</span>
+          <h2
+            className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight font-black uppercase tracking-tighter mb-2 sm:mb-3 md:mb-6 lg:hidden"
+            style={{ color: "#FFFFFF" }}
+          >
+            Our <span style={{ color: "#BBDEFB" }}>Domains.</span>
           </h2>
-          <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-sm mx-auto mb-3 sm:mb-4 leading-relaxed lg:hidden">
+          <p
+            className="text-xs sm:text-sm md:text-base max-w-sm mx-auto mb-3 sm:mb-4 leading-relaxed lg:hidden"
+            style={{ color: "#BBDEFB" }}
+          >
             We specialize in recruiting top talent across key industries.
           </p>
         </div>
@@ -110,7 +116,7 @@ const Services: React.FC = () => {
           >
             {categories.map((category, i) => (
               <SwiperSlide key={i}>
-                <div className="flex flex-col items-center bg-card/50 border border-border/50 rounded-lg sm:rounded-xl p-3 sm:p-4 hover:border-primary/50 transition-all duration-300 h-full">
+                <div className="flex flex-col items-center bg-white/20 border border-white/30 rounded-lg sm:rounded-xl p-3 sm:p-4 hover:border-white/50 transition-all duration-300 h-full">
                   {/* Image */}
                   <div className="w-full h-24 sm:h-28 md:h-32 relative mb-2 sm:mb-3 flex items-center justify-center">
                     <Image
@@ -121,7 +127,10 @@ const Services: React.FC = () => {
                     />
                   </div>
                   {/* Title */}
-                  <h3 className="text-xs sm:text-sm whitespace-nowrap font-bold uppercase tracking-tight text-foreground text-center">
+                  <h3
+                    className="text-xs sm:text-sm whitespace-nowrap font-bold uppercase tracking-tight text-center"
+                    style={{ color: "#FFFFFF" }}
+                  >
                     {category.title}
                   </h3>
                 </div>
@@ -135,11 +144,17 @@ const Services: React.FC = () => {
           {/* Left Sticky Header */}
           <div className="lg:w-1/3 shrink-0">
             <div className="sticky top-24 h-fit">
-              <h2 className="text-5xl xl:text-6xl leading-tight font-black uppercase tracking-tighter mb-8 text-foreground">
+              <h2
+                className="text-5xl xl:text-6xl leading-tight font-black uppercase tracking-tighter mb-8"
+                style={{ color: "#FFFFFF" }}
+              >
                 Our <br />
-                <span className="text-muted-foreground">Domains.</span>
+                <span style={{ color: "#BBDEFB" }}>Domains.</span>
               </h2>
-              <p className="text-muted-foreground text-lg max-w-sm mb-12 leading-relaxed">
+              <p
+                className="text-lg max-w-sm mb-12 leading-relaxed"
+                style={{ color: "#BBDEFB" }}
+              >
                 We specialize in recruiting top talent across key industries.
                 Find the perfect fit for your team.
               </p>
@@ -151,12 +166,12 @@ const Services: React.FC = () => {
             {categories.map((category, i) => (
               <div
                 key={i}
-                className="group py-16 hover:bg-card/30 transition-all duration-300 border-b border-border/50 last:border-b-0"
+                className="group py-16 hover:bg-white/10 transition-all duration-300 border-b border-white/20 last:border-b-0"
               >
                 <div className="flex flex-row gap-12 items-center">
                   {/* Number */}
                   <div className="w-24 shrink-0">
-                    <span className="text-6xl font-black text-primary/20 group-hover:text-primary/40 transition-colors duration-500 font-sans">
+                    <span className="text-6xl font-black text-white/30 group-hover:text-white/50 transition-colors duration-500 font-sans">
                       {category.num}
                     </span>
                   </div>
@@ -173,19 +188,25 @@ const Services: React.FC = () => {
 
                   {/* Content */}
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-4xl xl:text-5xl font-bold uppercase tracking-tight mb-6 text-foreground group-hover:text-primary transition-colors duration-300">
+                    <h3
+                      className="text-4xl xl:text-5xl font-bold uppercase tracking-tight mb-6 group-hover:text-[#BBDEFB] transition-colors duration-300"
+                      style={{ color: "#FFFFFF" }}
+                    >
                       {category.title}
                     </h3>
-                    <p className="text-lg text-muted-foreground leading-relaxed max-w-xl group-hover:text-foreground transition-colors duration-300">
+                    <p
+                      className="text-lg leading-relaxed max-w-xl group-hover:text-white transition-colors duration-300"
+                      style={{ color: "#BBDEFB" }}
+                    >
                       {category.description}
                     </p>
                   </div>
 
                   {/* Arrow */}
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full border border-border group-hover:border-primary group-hover:bg-primary/10 transition-all duration-300 shrink-0">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full border border-white/30 group-hover:border-white group-hover:bg-white/10 transition-all duration-300 shrink-0">
                     <ArrowRight
                       size={20}
-                      className="text-muted-foreground group-hover:text-primary transition-colors duration-300"
+                      className="text-white/70 group-hover:text-white transition-colors duration-300"
                     />
                   </div>
                 </div>

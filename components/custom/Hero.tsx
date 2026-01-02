@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   return (
     <section
       className="relative lg:py-0 overflow-hidden"
-      style={{ backgroundColor: "#F4F0FF" }}
+      style={{ backgroundColor: "#90CAF9", color: "#0D47A1" }}
     >
       {/* Grid container - full width for image to extend to edge */}
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center">
@@ -22,22 +22,31 @@ const Hero: React.FC = () => {
           className="flex flex-col gap-6 md:gap-8 px-4 md:px-8 lg:pl-12 xl:pl-20 2xl:pl-32 py-8 lg:py-12 max-w-2xl lg:max-w-none"
         >
           {/* Badge */}
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 md:px-4 py-1 md:py-1.5 text-[10px] md:text-xs font-semibold text-primary">
+          <div
+            className="inline-flex w-fit items-center gap-2 rounded-full border border-[#1565C0]/30 bg-[#1565C0]/10 px-3 md:px-4 py-1 md:py-1.5 text-[10px] md:text-xs font-semibold"
+            style={{ color: "#1565C0" }}
+          >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1565C0] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#1565C0]"></span>
             </span>
             #1 Recruitment Platform in India
           </div>
 
           {/* Headline */}
           <div className="flex flex-col gap-4 md:gap-6">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] md:leading-[1.05] tracking-tight text-foreground">
-              Your <span className="text-primary">Next Hire</span>
+            <h1
+              className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] md:leading-[1.05] tracking-tight"
+              style={{ color: "#0D47A1" }}
+            >
+              Your <span style={{ color: "#1565C0" }}>Next Hire</span>
               <br />
               Is One Click Away
             </h1>
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-lg">
+            <p
+              className="text-base md:text-lg lg:text-xl leading-relaxed max-w-lg"
+              style={{ color: "#1565C0" }}
+            >
               Connect with verified talent across India. From startups to
               enterprises, we power recruitment that works.
             </p>
@@ -69,34 +78,49 @@ const Hero: React.FC = () => {
           {/* Stats */}
           <div className="flex flex-wrap gap-6 md:gap-8 pt-4">
             <div className="flex flex-col">
-              <span className="text-2xl md:text-3xl font-black text-foreground">
+              <span
+                className="text-2xl md:text-3xl font-black"
+                style={{ color: "#0D47A1" }}
+              >
                 50K+
               </span>
-              <span className="text-xs md:text-sm text-muted-foreground">
+              <span className="text-xs md:text-sm" style={{ color: "#1565C0" }}>
                 Active Jobs
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl md:text-3xl font-black text-foreground">
+              <span
+                className="text-2xl md:text-3xl font-black"
+                style={{ color: "#0D47A1" }}
+              >
                 10K+
               </span>
-              <span className="text-xs md:text-sm text-muted-foreground">
+              <span className="text-xs md:text-sm" style={{ color: "#1565C0" }}>
                 Companies
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl md:text-3xl font-black text-foreground">
+              <span
+                className="text-2xl md:text-3xl font-black"
+                style={{ color: "#0D47A1" }}
+              >
                 98%
               </span>
-              <span className="text-xs md:text-sm text-muted-foreground">
+              <span className="text-xs md:text-sm" style={{ color: "#1565C0" }}>
                 Success Rate
               </span>
             </div>
           </div>
 
           {/* Trust logos */}
-          <div className="pt-4 md:pt-6 border-t border-border">
-            <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest mb-3 md:mb-4">
+          <div
+            className="pt-4 md:pt-6 border-t"
+            style={{ borderColor: "#1565C0" }}
+          >
+            <p
+              className="text-[10px] md:text-xs uppercase tracking-widest mb-3 md:mb-4"
+              style={{ color: "#1565C0" }}
+            >
               Trusted by leading companies
             </p>
             <div className="flex flex-wrap items-center gap-4 md:gap-6 opacity-50">
@@ -109,7 +133,8 @@ const Hero: React.FC = () => {
               ].map((icon, i) => (
                 <span
                   key={i}
-                  className="material-symbols-outlined text-2xl md:text-3xl text-foreground"
+                  className="material-symbols-outlined text-2xl md:text-3xl"
+                  style={{ color: "#0D47A1" }}
                 >
                   {icon}
                 </span>
