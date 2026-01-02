@@ -208,7 +208,7 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative py-12 md:py-20 px-4 md:px-10 lg:px-20 bg-card overflow-hidden"
+      className="relative py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 bg-card overflow-hidden"
     >
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -216,11 +216,11 @@ const Contact: React.FC = () => {
         <div className="absolute top-[40%] -left-[10%] w-[400px] h-[400px] bg-blue-300/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-[1400pxpx] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-20 items-center">
           {/* Left Content */}
-          <div className="flex flex-col gap-4 md:gap-6 max-w-lg">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-2 md:px-3 py-1 text-[10px] md:text-xs font-medium text-primary">
+          <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 max-w-lg">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-2 sm:px-2.5 md:px-3 py-1 text-[9px] sm:text-[10px] md:text-xs font-medium text-primary">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -228,60 +228,60 @@ const Contact: React.FC = () => {
               Response within 24h
             </div>
 
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.15]">
+            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.15]">
               Let's Build Your Team{" "}
               <span className="text-primary">Together</span>
             </h2>
 
-            <p className="text-muted-foreground text-sm md:text-base lg:text-lg leading-relaxed">
+            <p className="text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed">
               Connect with our talent specialists to find the perfect fit for
               your company. Fill out the form and we'll start the search
               immediately.
             </p>
 
             {/* Feature list */}
-            <div className="flex flex-col gap-3 md:gap-4 mt-2 md:mt-4">
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <span className="material-symbols-outlined text-xl">
+            <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 mt-1 sm:mt-2 md:mt-4">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 items-center justify-center rounded-md sm:rounded-lg bg-primary/10 text-primary">
+                  <span className="material-symbols-outlined text-lg sm:text-xl">
                     check_circle
                   </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-sm text-foreground">
+                  <span className="font-bold text-xs sm:text-sm text-foreground">
                     Verified Candidates
                   </span>
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">
                     Pre-screened professionals ready to hire.
                   </span>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <span className="material-symbols-outlined text-xl">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 items-center justify-center rounded-md sm:rounded-lg bg-primary/10 text-primary">
+                  <span className="material-symbols-outlined text-lg sm:text-xl">
                     bolt
                   </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-sm text-foreground">
+                  <span className="font-bold text-xs sm:text-sm text-foreground">
                     Fast Placement
                   </span>
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">
                     Average placement time of 7 days.
                   </span>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <span className="material-symbols-outlined text-xl">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 items-center justify-center rounded-md sm:rounded-lg bg-primary/10 text-primary">
+                  <span className="material-symbols-outlined text-lg sm:text-xl">
                     support_agent
                   </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-sm text-foreground">
+                  <span className="font-bold text-xs sm:text-sm text-foreground">
                     Dedicated Support
                   </span>
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">
                     Personal account manager for every client.
                   </span>
                 </div>
@@ -289,29 +289,29 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Trust signal */}
-            <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-border">
-              <div className="flex items-center gap-4">
-                <div className="flex -space-x-3">
+            <div className="mt-4 sm:mt-6 md:mt-8 pt-4 sm:pt-6 md:pt-8 border-t border-border">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex -space-x-2 sm:-space-x-3">
                   <Image
                     src="https://i.pravatar.cc/100?img=1"
                     alt="Customer"
                     height={100}
                     width={100}
-                    className="h-10 w-10 rounded-full border-2 border-card object-cover"
+                    className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border-2 border-card object-cover"
                   />
                   <Image
                     src="https://i.pravatar.cc/100?img=2"
                     alt="Customer"
                     height={100}
                     width={100}
-                    className="h-10 w-10 rounded-full border-2 border-card object-cover"
+                    className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border-2 border-card object-cover"
                   />
                   <Image
                     src="https://i.pravatar.cc/100?img=3"
                     alt="Customer"
                     height={100}
                     width={100}
-                    className="h-10 w-10 rounded-full border-2 border-card object-cover"
+                    className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border-2 border-card object-cover"
                   />
                 </div>
                 <div className="flex flex-col">
@@ -326,7 +326,7 @@ const Contact: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                  <span className="text-sm font-medium text-muted-foreground">
+                  <span className="text-xs sm:text-sm font-medium text-muted-foreground">
                     Trusted by 500+ companies
                   </span>
                 </div>
@@ -336,11 +336,14 @@ const Contact: React.FC = () => {
 
           {/* Right: Form Card */}
           <div className="w-full">
-            <div className="bg-gradient-to-br from-primary to-primary/80 dark:from-primary/90 dark:to-primary/70 p-6 md:p-8 lg:p-12 border border-primary/20 backdrop-blur-sm rounded-xl md:rounded-2xl shadow-xl shadow-primary/20">
-              <h3 className="text-xl md:text-2xl font-bold uppercase mb-6 md:mb-10 text-primary-foreground">
+            <div className="bg-gradient-to-br from-primary to-primary/80 dark:from-primary/90 dark:to-primary/70 p-4 sm:p-6 md:p-8 lg:p-12 border border-primary/20 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl shadow-primary/20">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase mb-4 sm:mb-6 md:mb-10 text-primary-foreground">
                 Get a Free Consultation
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-4 sm:space-y-6 md:space-y-8"
+              >
                 <FloatingInput
                   name="name"
                   label="Your Name"

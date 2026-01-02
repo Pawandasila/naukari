@@ -29,10 +29,10 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-primary to-primary/90 dark:from-primary/95 dark:to-primary/80 border-t border-primary-foreground/10 pt-12 md:pt-20 pb-6 md:pb-8 px-4 md:px-10 lg:px-20 relative z-10 overflow-hidden">
+    <footer className="bg-gradient-to-b from-primary to-primary/90 dark:from-primary/95 dark:to-primary/80 border-t border-primary-foreground/10 pt-10 sm:pt-12 md:pt-20 pb-5 sm:pb-6 md:pb-8 px-4 sm:px-6 md:px-10 lg:px-20 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12 mb-10 sm:mb-12 md:mb-20">
           {/* Sitemap */}
           <div>
             <h4 className="font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6 text-primary-foreground/60">

@@ -54,46 +54,67 @@ const Services: React.FC = () => {
   return (
     <section
       id="services"
-      className="py-8 md:py-12 px-4 md:px-6 relative z-10 bg-background"
+      className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 relative z-10 bg-background"
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/2 right-0 w-48 md:w-96 h-48 md:h-96 bg-primary/8 rounded-full blur-3xl opacity-30"></div>
         <div className="absolute bottom-0 left-1/4 w-48 md:w-96 h-48 md:h-96 bg-primary/5 rounded-full blur-3xl opacity-15"></div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header - Always visible */}
-        <div className="text-center lg:text-left mb-6 md:mb-0">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight font-black uppercase tracking-tighter mb-3 md:mb-6 text-foreground lg:hidden">
+        <div className="text-center lg:text-left mb-4 sm:mb-6 md:mb-0">
+          <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight font-black uppercase tracking-tighter mb-2 sm:mb-3 md:mb-6 text-foreground lg:hidden">
             Our <span className="text-muted-foreground">Domains.</span>
           </h2>
-          <p className="text-muted-foreground text-sm md:text-base max-w-sm mx-auto mb-4 leading-relaxed lg:hidden">
+          <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-sm mx-auto mb-3 sm:mb-4 leading-relaxed lg:hidden">
             We specialize in recruiting top talent across key industries.
           </p>
         </div>
 
-        {/* Mobile Swiper Layout */}
+        {/* Mobile/Tablet Swiper Layout */}
         <div className="lg:hidden">
           <Swiper
             modules={[Autoplay, Pagination]}
-            spaceBetween={16}
-            slidesPerView={2.2}
+            spaceBetween={12}
+            slidesPerView={1.5}
             centeredSlides={false}
-            cardsEffect={{
-              slideShadows: true,
-              perSlideOffset: 20,
+            breakpoints={{
+              360: {
+                slidesPerView: 1.8,
+                spaceBetween: 12,
+              },
+              480: {
+                slidesPerView: 2.2,
+                spaceBetween: 14,
+              },
+              640: {
+                slidesPerView: 2.8,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 3.5,
+                spaceBetween: 16,
+              },
+              896: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
             }}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
             }}
-            className="pb-16"
+            pagination={{
+              clickable: true,
+            }}
+            className="pb-12 sm:pb-14"
           >
             {categories.map((category, i) => (
               <SwiperSlide key={i}>
-                <div className="flex flex-col items-center bg-card/50 border border-border/50 rounded-xl p-4 hover:border-primary/50 transition-all duration-300">
+                <div className="flex flex-col items-center bg-card/50 border border-border/50 rounded-lg sm:rounded-xl p-3 sm:p-4 hover:border-primary/50 transition-all duration-300 h-full">
                   {/* Image */}
-                  <div className="w-full h-32 relative mb-3 flex items-center justify-center">
+                  <div className="w-full h-24 sm:h-28 md:h-32 relative mb-2 sm:mb-3 flex items-center justify-center">
                     <Image
                       src={category.image}
                       alt={category.title}
@@ -102,7 +123,7 @@ const Services: React.FC = () => {
                     />
                   </div>
                   {/* Title */}
-                  <h3 className="text-sm whitespace-nowrap font-bold uppercase tracking-tight text-foreground text-center">
+                  <h3 className="text-xs sm:text-sm whitespace-nowrap font-bold uppercase tracking-tight text-foreground text-center">
                     {category.title}
                   </h3>
                 </div>

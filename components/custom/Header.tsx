@@ -56,7 +56,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex flex-1 justify-end gap-8">
+        <div className="hidden lg:flex flex-1 justify-end gap-8">
           <div className="flex items-center gap-6 lg:gap-9">
             {navLinks.map((link) => (
               <Link
@@ -74,7 +74,7 @@ const Header: React.FC = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden flex items-center justify-center w-10 h-10 text-foreground"
+          className="lg:hidden flex items-center justify-center w-10 h-10 text-foreground"
           aria-label="Toggle menu"
         >
           <span className="material-symbols-outlined text-2xl">
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[57px] bg-white dark:bg-background-dark border-b border-border z-40 shadow-lg">
+        <div className="lg:hidden fixed inset-x-0 top-[57px] bg-white dark:bg-background-dark border-b border-border z-40 shadow-lg">
           <div className="flex flex-col p-4 gap-2">
             {navLinks.map((link) => (
               <a

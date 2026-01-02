@@ -26,42 +26,45 @@ const Employers: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-muted/50" id="employers">
-      <div className="px-4 md:px-8 flex justify-center">
-        <div className="max-w-[1400px] w-full grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+    <section
+      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-muted/50"
+      id="employers"
+    >
+      <div className="px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <div className="flex flex-col gap-6 md:gap-8">
-            <div className="flex flex-col gap-3 md:gap-4">
-              <div className="flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-[10px] md:text-xs">
-                <span className="w-6 md:w-8 h-[2px] bg-primary"></span>
+          <div className="flex flex-col gap-5 sm:gap-6 md:gap-8">
+            <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
+              <div className="flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-[9px] sm:text-[10px] md:text-xs">
+                <span className="w-5 sm:w-6 md:w-8 h-[2px] bg-primary"></span>
                 For Employers
               </div>
-              <h2 className="text-foreground text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight">
+              <h2 className="text-foreground text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight">
                 Build Your Dream Team with Confidence
               </h2>
-              <p className="text-muted-foreground text-sm md:text-base lg:text-lg leading-relaxed">
+              <p className="text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed">
                 Streamline your hiring process with our enterprise-grade
                 solutions. We provide the tools and talent pool you need to
                 scale effectively.
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 md:gap-4">
+            <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex gap-3 md:gap-4 p-3 md:p-4 rounded-lg bg-card border border-border shadow-sm hover:shadow-md transition-shadow"
+                  className="flex gap-2.5 sm:gap-3 md:gap-4 p-2.5 sm:p-3 md:p-4 rounded-md sm:rounded-lg bg-card border border-border shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="text-primary mt-0.5 md:mt-1">
-                    <span className="material-symbols-outlined text-xl md:text-2xl">
+                  <div className="text-primary mt-0.5">
+                    <span className="material-symbols-outlined text-lg sm:text-xl md:text-2xl">
                       {feature.icon}
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-card-foreground text-base md:text-lg">
+                    <h3 className="font-bold text-card-foreground text-sm sm:text-base md:text-lg">
                       {feature.title}
                     </h3>
-                    <p className="text-muted-foreground text-xs md:text-sm mt-1">
+                    <p className="text-muted-foreground text-[10px] sm:text-xs md:text-sm mt-0.5 sm:mt-1">
                       {feature.description}
                     </p>
                   </div>
@@ -69,13 +72,13 @@ const Employers: React.FC = () => {
               ))}
             </div>
 
-            <Button className="w-fit mt-2 h-11 md:h-12 px-5 md:px-6 text-sm md:text-base font-bold shadow-md">
+            <Button className="w-fit mt-1 sm:mt-2 h-10 sm:h-11 md:h-12 px-4 sm:px-5 md:px-6 text-xs sm:text-sm md:text-base font-bold shadow-md">
               Start Hiring Now
             </Button>
           </div>
 
           {/* Image */}
-          <div className="relative h-[250px] md:h-[350px] lg:h-full lg:min-h-[400px] rounded-xl md:rounded-2xl overflow-hidden shadow-xl order-first lg:order-last">
+          <div className="relative h-[200px] sm:h-[250px] md:h-[350px] lg:h-full lg:min-h-[400px] rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden shadow-xl order-first lg:order-last">
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
