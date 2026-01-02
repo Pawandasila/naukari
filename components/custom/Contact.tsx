@@ -336,7 +336,7 @@ const Contact: React.FC = () => {
 
           {/* Right: Form Card */}
           <div className="w-full">
-            <div className="bg-gradient-to-br from-primary to-primary/80 dark:from-primary/90 dark:to-primary/70 p-4 sm:p-6 md:p-8 lg:p-12 border border-primary/20 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl shadow-primary/20">
+            <div className="bg-linear-to-br from-primary to-primary/80 dark:from-primary/90 dark:to-primary/70 p-4 sm:p-6 md:p-8 lg:p-12 border border-primary/20 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl shadow-primary/20">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase mb-4 sm:mb-6 md:mb-10 text-primary-foreground">
                 Get a Free Consultation
               </h3>

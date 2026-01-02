@@ -15,18 +15,14 @@ export default function Home() {
         <Header />
         <main>
           <Hero />
-          <SectionReveal direction="left" delay={0.3}>
-            <Services />
-          </SectionReveal>
-          <SectionReveal direction="right" delay={0.6}>
-            <Employers />
-          </SectionReveal>
-          <SectionReveal direction="fade" delay={0.9}>
-            <JobSeeker />
-          </SectionReveal>
-          <SectionReveal direction="up" delay={1.2}>
-            <Contact />
-          </SectionReveal>
+
+          <Services />
+
+          <Employers />
+
+          <JobSeeker />
+
+          <Contact />
         </main>
         <Footer />
       </div>
