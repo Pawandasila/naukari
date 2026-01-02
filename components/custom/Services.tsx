@@ -61,7 +61,7 @@ const Services: React.FC = () => {
         <div className="absolute bottom-0 left-1/4 w-48 md:w-96 h-48 md:h-96 bg-primary/5 rounded-full blur-3xl opacity-15"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1400px] mx-auto relative z-10">
         {/* Header - Always visible */}
         <div className="text-center lg:text-left mb-6 md:mb-0">
           <h2 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight font-black uppercase tracking-tighter mb-3 md:mb-6 text-foreground lg:hidden">

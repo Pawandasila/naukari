@@ -8,14 +8,14 @@ import bgImage from "@/assests/bg-2.png";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative md:min-h-screen bg-background overflow-hidden pb-8 md:pb-0">
+    <section className="relative md:min-h-screen bg-background overflow-hidden">
       <div className="relative z-10 max-w-[100vw] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center md:min-h-[70vh]">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col gap-6 md:gap-8 px-4 md:px-8 py-8 md:py-0"
+            className="flex flex-col gap-6 md:gap-8 px-4 md:px-4 mx-auto py-8 md:py-0"
           >
             {/* Badge */}
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 md:px-4 py-1 md:py-1.5 text-[10px] md:text-xs font-semibold text-primary">
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
 
             {/* Headline */}
             <div className="flex flex-col gap-4 md:gap-6">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] md:leading-[1.05] tracking-tight text-foreground">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl  xl:text-7xl font-black leading-[1.1] md:leading-[1.05] tracking-tight text-foreground">
                 Your Next <span className="text-primary">Hire</span> is
                 <br />
                 One Click Away

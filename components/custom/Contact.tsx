@@ -208,7 +208,7 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative py-12 md:py-20 lg:py-28 px-4 md:px-10 lg:px-20 bg-card overflow-hidden"
+      className="relative py-12 md:py-20 px-4 md:px-10 lg:px-20 bg-card overflow-hidden"
     >
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -216,7 +216,7 @@ const Contact: React.FC = () => {
         <div className="absolute top-[40%] -left-[10%] w-[400px] h-[400px] bg-blue-300/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-[1400pxpx] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
           {/* Left Content */}
           <div className="flex flex-col gap-4 md:gap-6 max-w-lg">

@@ -27,8 +27,8 @@ const Employers: React.FC = () => {
 
   return (
     <section className="py-12 md:py-20 bg-muted/50" id="employers">
-      <div className="px-4 md:px-10 lg:px-20 flex justify-center">
-        <div className="max-w-[1200px] w-full grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+      <div className="px-4 md:px-8 flex justify-center">
+        <div className="max-w-[1400px] w-full grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="flex flex-col gap-6 md:gap-8">
             <div className="flex flex-col gap-3 md:gap-4">
