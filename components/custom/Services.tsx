@@ -54,7 +54,7 @@ const Services: React.FC = () => {
   return (
     <section
       id="services"
-      className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 relative z-10 bg-background"
+      className="py-6 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-12 relative z-10 bg-background"
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/2 right-0 w-48 md:w-96 h-48 md:h-96 bg-primary/8 rounded-full blur-3xl opacity-30"></div>
@@ -104,9 +104,6 @@ const Services: React.FC = () => {
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
             }}
             className="pb-12 sm:pb-14"
           >
