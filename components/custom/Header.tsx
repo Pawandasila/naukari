@@ -37,7 +37,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-b-[#e7edf3] dark:border-b-gray-800 bg-white/90 dark:bg-background-dark/90 px-4 md:px-10 py-3 md:py-4 backdrop-blur-sm">
+      <header className="sticky top-0 z-50 flex items-center justify-between border-b border-border bg-background/90 px-4 md:px-10 py-3 md:py-4 backdrop-blur-sm">
         <div className="flex items-center gap-2 md:gap-4">
           <div className="flex items-center gap-2 md:gap-3 lg:flex-1">
             <Link href="#" className="flex items-center gap-2 group">
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
                 key={link.href}
                 href={`#${link.href}`}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="text-sm font-medium leading-normal text-[#0d141b] dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
+                className="text-sm font-medium leading-normal text-foreground hover:text-primary transition-colors cursor-pointer"
               >
                 {link.label}
               </Link>
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[57px] bg-white dark:bg-background-dark border-b border-border z-40 shadow-lg">
+        <div className="lg:hidden fixed inset-x-0 top-[57px] bg-background border-b border-border z-40 shadow-lg">
           <div className="flex flex-col p-4 gap-2">
             {navLinks.map((link) => (
               <a

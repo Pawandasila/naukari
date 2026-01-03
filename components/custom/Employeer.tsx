@@ -27,35 +27,22 @@ const Employers: React.FC = () => {
 
   return (
     <section
-      className="py-12 sm:py-16 md:py-20 lg:py-24"
+      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-background text-foreground"
       id="employers"
-      style={{ backgroundColor: "#90CAF9", color: "#0D47A1" }}
     >
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="flex flex-col gap-5 sm:gap-6 md:gap-8">
             <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
-              <div
-                className="flex items-center gap-2 font-bold uppercase tracking-wider text-[9px] sm:text-[10px] md:text-xs"
-                style={{ color: "#1565C0" }}
-              >
-                <span
-                  className="w-5 sm:w-6 md:w-8 h-[2px]"
-                  style={{ backgroundColor: "#1565C0" }}
-                ></span>
+              <div className="flex items-center gap-2 font-bold uppercase tracking-wider text-[9px] sm:text-[10px] md:text-xs text-primary">
+                <span className="w-5 sm:w-6 md:w-8 h-[2px] bg-primary"></span>
                 For Employers
               </div>
-              <h2
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight"
-                style={{ color: "#0D47A1" }}
-              >
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight text-foreground">
                 Build Your Dream Team with Confidence
               </h2>
-              <p
-                className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed"
-                style={{ color: "#1565C0" }}
-              >
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-muted-foreground">
                 Streamline your hiring process with our enterprise-grade
                 solutions. We provide the tools and talent pool you need to
                 scale effectively.
@@ -66,25 +53,18 @@ const Employers: React.FC = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex gap-2.5 sm:gap-3 md:gap-4 p-2.5 sm:p-3 md:p-4 rounded-md sm:rounded-lg border shadow-sm hover:shadow-md transition-shadow"
-                  style={{ backgroundColor: "#FFFFFF", borderColor: "#BBDEFB" }}
+                  className="flex gap-2.5 sm:gap-3 md:gap-4 p-2.5 sm:p-3 md:p-4 rounded-md sm:rounded-lg border border-border bg-card shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="mt-0.5" style={{ color: "#1565C0" }}>
+                  <div className="mt-0.5 text-primary">
                     <span className="material-symbols-outlined text-lg sm:text-xl md:text-2xl">
                       {feature.icon}
                     </span>
                   </div>
                   <div>
-                    <h3
-                      className="font-bold text-sm sm:text-base md:text-lg"
-                      style={{ color: "#0D47A1" }}
-                    >
+                    <h3 className="font-bold text-sm sm:text-base md:text-lg text-foreground">
                       {feature.title}
                     </h3>
-                    <p
-                      className="text-[10px] sm:text-xs md:text-sm mt-0.5 sm:mt-1"
-                      style={{ color: "#1565C0" }}
-                    >
+                    <p className="text-[10px] sm:text-xs md:text-sm mt-0.5 sm:mt-1 text-muted-foreground">
                       {feature.description}
                     </p>
                   </div>

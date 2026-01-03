@@ -29,9 +29,8 @@ const JobSeeker: React.FC = () => {
 
   return (
     <section
-      className="py-12 sm:py-16 md:py-20 lg:py-24"
+      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-muted text-foreground"
       id="seekers"
-      style={{ backgroundColor: "#1E88E5", color: "#FFFFFF" }}
     >
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
@@ -49,26 +48,14 @@ const JobSeeker: React.FC = () => {
           {/* Content */}
           <div className="order-1 lg:order-2 flex flex-col gap-5 sm:gap-6 md:gap-8">
             <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
-              <div
-                className="flex items-center gap-2 font-bold uppercase tracking-wider text-[9px] sm:text-[10px] md:text-xs"
-                style={{ color: "#BBDEFB" }}
-              >
-                <span
-                  className="w-5 sm:w-6 md:w-8 h-[2px]"
-                  style={{ backgroundColor: "#BBDEFB" }}
-                ></span>
+              <div className="flex items-center gap-2 font-bold uppercase tracking-wider text-[9px] sm:text-[10px] md:text-xs text-primary">
+                <span className="w-5 sm:w-6 md:w-8 h-[2px] bg-primary"></span>
                 For Job Seekers
               </div>
-              <h2
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight"
-                style={{ color: "#FFFFFF" }}
-              >
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight text-foreground">
                 Land Your Dream Role Faster
               </h2>
-              <p
-                className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed"
-                style={{ color: "#BBDEFB" }}
-              >
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-muted-foreground">
                 Stop endless searching. Create one profile and get matched with
                 top companies looking for your specific skills.
               </p>
@@ -78,28 +65,15 @@ const JobSeeker: React.FC = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex flex-col gap-1 sm:gap-1.5 md:gap-2 p-2.5 sm:p-3 md:p-5 rounded-md sm:rounded-lg md:rounded-xl border hover:shadow-md transition-shadow"
-                  style={{
-                    backgroundColor: "rgba(255,255,255,0.15)",
-                    borderColor: "rgba(255,255,255,0.3)",
-                  }}
+                  className="flex flex-col gap-1 sm:gap-1.5 md:gap-2 p-2.5 sm:p-3 md:p-5 rounded-md sm:rounded-lg md:rounded-xl border border-border bg-card hover:shadow-md transition-shadow"
                 >
-                  <span
-                    className="material-symbols-outlined text-xl sm:text-2xl md:text-3xl"
-                    style={{ color: "#BBDEFB" }}
-                  >
+                  <span className="material-symbols-outlined text-primary text-xl sm:text-2xl md:text-3xl">
                     {feature.icon}
                   </span>
-                  <h3
-                    className="font-bold text-xs sm:text-sm md:text-base"
-                    style={{ color: "#FFFFFF" }}
-                  >
+                  <h3 className="font-bold text-xs sm:text-sm md:text-base text-foreground">
                     {feature.title}
                   </h3>
-                  <p
-                    className="text-[10px] sm:text-xs md:text-sm hidden sm:block"
-                    style={{ color: "#BBDEFB" }}
-                  >
+                  <p className="text-muted-foreground text-[10px] sm:text-xs md:text-sm hidden sm:block">
                     {feature.description}
                   </p>
                 </div>
